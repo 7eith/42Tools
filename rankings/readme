@@ -1,0 +1,9 @@
+To set up the environment : 
+- copy the directory where you want in your home
+- './install'
+
+To launch the script : 
+- 'npm install'
+- 'npm start'
+
+This script uses the Matrix to fetch the levels of all connected users that are not students, you will have to enter your credentials.
