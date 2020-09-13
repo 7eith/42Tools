@@ -1,8 +1,9 @@
-To set up the environment : 
-- copy the directory where you want in your home
+To set up the environment :
+- 'git clone https://github.com/iSnkh/42Tools'
+- 'cd 42Tools/rankings'
 - './install'
 
-To launch the script : 
+To launch the script :
 - 'npm install'
 - 'npm start'
 
