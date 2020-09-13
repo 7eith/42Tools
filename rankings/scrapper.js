@@ -96,6 +96,11 @@ let login = async (page, url, userName, password) => {          // Login to the 
         document.getElementsByClassName('btn btn-login')[0].click();
         return document.getElementById('user_login').value
     }, userName, password);
+
+    await page.waitFor(333);
+    const authorizeSelector = 'input[value="Authorize"]';
+    await page.waitForSelector(authorizeSelector);
+    await page.click(authorizeSelector);
 };
 
 let compute = async (page, imgList) => {             // Let the JS magic happen
@@ -139,7 +144,7 @@ let compute = async (page, imgList) => {             // Let the JS magic happen
 
 
 async function mainScrap(userName, password) {
-    let url = "https://the-matrix.le-101.fr/";
+    let url = "http://42matrix.tk/";
     const browser = await puppeteer.launch({
         headless: true,
         ignoreHTTPSErrors: true
@@ -172,4 +177,6 @@ async function mainScrap(userName, password) {
             return 1;
         }
     }));
+
+    await browser.close();
 }
